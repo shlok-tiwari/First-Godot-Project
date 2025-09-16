@@ -15,4 +15,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = -WALKING_SPEED
 	if (Input.is_action_pressed("Right")):
 		velocity.x = WALKING_SPEED
+	if (Input.is_action_pressed("Shift")):
+		velocity.x = 3 * velocity.x
 	move_and_slide()
